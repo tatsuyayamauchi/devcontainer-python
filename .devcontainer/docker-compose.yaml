@@ -1,0 +1,10 @@
+services:
+  python3:
+    container_name: python3.13-devcontainer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    working_dir: /workspace
+    volumes:
+      - ..:/workspace

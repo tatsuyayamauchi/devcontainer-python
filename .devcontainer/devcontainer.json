@@ -1,0 +1,25 @@
+{
+  "name": "Python3.13",
+  "dockerComposeFile": "docker-compose.yaml",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "vscode",
+  "service": "python3",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash",
+        "workbench.colorCustomizations": {
+          "titleBar.activeBackground": "#19549C",
+          "titleBar.activeForeground": "#ffffff",
+          "activityBar.background": "#02A7E3",
+          "activityBar.foreground": "#ffffff"
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "EditorConfig.EditorConfig"
+      ]
+    },
+    "postCreateCommand": "pip install -r ../requirements.txt || (echo 'Installation failed or requirements.txt not found'; exit 1)"
+  }
+}
